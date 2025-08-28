@@ -1,7 +1,8 @@
 %% IEEE-39 bus system
 nbus = 39;
-Sbase = 100; %% MVA
+Sbase = 100; %% MVA, Ubase=230kV?
 wb = 2*pi*50; %% rad/s
+START_BUS = 0;
 
 %%      |  From_Bus |  T_ Bus  |   R_pu    |   X_pu     |     B_pu
 branch_data=[

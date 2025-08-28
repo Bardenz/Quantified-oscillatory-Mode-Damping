@@ -1,7 +1,8 @@
 %% IEEE-5 bus system
 nbus = 5;
-Sbase = 100; %% MVA
+Sbase = 100; %% MVA, Un=230kV
 wb = 2*pi*50; %% rad/s
+START_BUS = 0;
 
 %%      |  From_Bus |  T_ Bus  |   R_pu    |   X_pu     |     B_pu
 branch_data=[
@@ -21,7 +22,7 @@ bus_data=[
              ];
 
       %buses with 0 load demand are not listed here
-%%           |  at_Bus   | Bus_type  | Voltage_pu    |P_gen_pu   | Q_gen_pu   |Sub-transient_Xd_pu|
+%%           |  at_Bus   | Bus_type  | Voltage_pu    |P_gen_pu   | Q_gen_pu   |Sub-transient|
 gen_data=[
                 3     3       1.0000     0.000000   0.00000     0.25
                 0     2       1.0000     0.400000   0.00000     0.25
